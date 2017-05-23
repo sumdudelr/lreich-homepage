@@ -5,5 +5,45 @@
         <data xmlns="http://www.netbeans.org/ns/clientside-project/1">
             <name>MyHomepage</name>
         </data>
+        <libraries xmlns="http://www.netbeans.org/ns/cdnjs-libraries/1">
+            <library name="pdf.js" version="1.8.380">
+                <file localPath="public_html/js/pdf.js/compatibility.js" path="compatibility.js"/>
+                <file localPath="public_html/js/pdf.js/compatibility.js.map" path="compatibility.js.map"/>
+                <file localPath="public_html/js/pdf.js/compatibility.min.js" path="compatibility.min.js"/>
+                <file localPath="public_html/js/pdf.js/compatibility.min.js.map" path="compatibility.min.js.map"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-check.svg" path="images/annotation-check.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-comment.svg" path="images/annotation-comment.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-help.svg" path="images/annotation-help.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-insert.svg" path="images/annotation-insert.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-key.svg" path="images/annotation-key.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-newparagraph.svg" path="images/annotation-newparagraph.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-noicon.svg" path="images/annotation-noicon.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-note.svg" path="images/annotation-note.svg"/>
+                <file localPath="public_html/js/pdf.js/images/annotation-paragraph.svg" path="images/annotation-paragraph.svg"/>
+                <file localPath="public_html/js/pdf.js/images/loading-icon.gif" path="images/loading-icon.gif"/>
+                <file localPath="public_html/js/pdf.js/images/shadow.png" path="images/shadow.png"/>
+                <file localPath="public_html/js/pdf.js/images/texture.png" path="images/texture.png"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.css" path="pdf_viewer.css"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.js" path="pdf_viewer.js"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.js.map" path="pdf_viewer.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.min.css" path="pdf_viewer.min.css"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.min.css.map" path="pdf_viewer.min.css.map"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.min.js" path="pdf_viewer.min.js"/>
+                <file localPath="public_html/js/pdf.js/pdf_viewer.min.js.map" path="pdf_viewer.min.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf.combined.js" path="pdf.combined.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.combined.js.map" path="pdf.combined.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf.combined.min.js" path="pdf.combined.min.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.combined.min.js.map" path="pdf.combined.min.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf.js" path="pdf.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.js.map" path="pdf.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf.min.js" path="pdf.min.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.worker.entry.js" path="pdf.worker.entry.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.worker.entry.min.js" path="pdf.worker.entry.min.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.worker.entry.min.js.map" path="pdf.worker.entry.min.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf.worker.js" path="pdf.worker.js"/>
+                <file localPath="public_html/js/pdf.js/pdf.worker.js.map" path="pdf.worker.js.map"/>
+                <file localPath="public_html/js/pdf.js/pdf.worker.min.js" path="pdf.worker.min.js"/>
+            </library>
+        </libraries>
     </configuration>
 </project>
