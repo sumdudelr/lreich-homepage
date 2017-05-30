@@ -33,6 +33,72 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-sm-8 blog-main">
                     <div class="blog-post">
+                        <h2 class="blog-post-title">
+                            Monolithic, Micro, and Hybrid Kernels
+                        </h2>
+                        <p class="blog-post-meta">
+                            May 30, 2017 by
+                            <a href="#">Logan</a>
+                        </p>
+                        <p>
+                            With the new developments around Mozilla's Rust
+                            programming language and Redox OS, I thought that it
+                            would be interesting to talk about the future of
+                            kernel architecture. In the past, the future looked
+                            as though th microkernel approach would prove to be
+                            the system of choice as computers began connecting
+                            through the internet and could potentially harm your
+                            computer. Monolithic kernels we use today such as
+                            the Linux kernel could be considered insecure in
+                            respect to the way all programs are run in
+                            "Supervisor Mode". This means that every piece of
+                            the operating system is allowed direct access to the
+                            hardware. Many people that prefer to work in Linux
+                            explain their reason for using Linux to be that
+                            Linux is more secure than Microsoft Windows. The
+                            Windows NT kernel is structured as what is known as
+                            a hybrid kernel. This means that the kernel is
+                            structured like a microkernel, but still runs most
+                            of the OS in kernel space. This means that the
+                            hybrid Windows NT kernel might even be more secure
+                            than the Linux kernel. Apple's Darwin originally
+                            started as slight modifications to the Mach
+                            microkernel. Over time, Apple has made the kernel
+                            into a hybrid kernel operating in a similar way to
+                            the NT kernel.
+                        </p>
+                        <hr>
+                        <p>
+                            There are still many remnants of the old
+                            microkernels that were used for research purposes.
+                            One example is the Minix kernel. The linux kernel
+                            was actually based on this system. Minux is not so
+                            useable today because it does not support a 64-bit
+                            environment. This is problematic because it limits
+                            the amount of memory the system can address. Another
+                            microkernel that has the same issues is GNU Hurd.
+                            This kernel is where the GNU utilities we often find
+                            with other Unix based systems were originally
+                            planned for. HelenOS is another microkernel based
+                            operating system that is used for research purposes.
+                            HelenOS does not suffer from the lack of support for
+                            hardware. However, has sacrificed compatibility with
+                            the majority of the software written for Unix
+                            systems. The newest addition to the list of
+                            microkernel systems is Redox OS. Redox brings all
+                            the benefits of the microkernel to modern systems
+                            while using a modern Unix-like interface. What makes
+                            Redox even more special is that it is written mostly
+                            in Rust. Rust is a programming language similar to
+                            C++, but is memory safe. The combination of Rust and
+                            the microkernel architecture will possibly make
+                            Redox the most stable operating system there is. We
+                            will just have to wait and see where this project
+                            takes us.
+                        </p>
+                    </div>
+                    <!-- /.blog-post -->
+                    <div class="blog-post">
                     <h2 class="blog-post-title">VoCore2 Lite</h2>
                     <p class="blog-post-meta">
                         May 25, 2017 by
@@ -118,6 +184,11 @@ and open the template in the editor.
                             <li>
                                 <a href="https://twitter.com/SumdudeLR">
                                     Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://mastodon.technology/@sumdudelr">
+                                    Mastodon
                                 </a>
                             </li>
                             <li>
