@@ -33,6 +33,64 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-sm-8 blog-main">
                     <div class="blog-post">
+                        <h2 class="blog-post-title">The Onion Omega2+</h2>
+                        <p class="blog-post-meta">
+                            June 16, 2017 by
+                            <a href="#">Logan</a>
+                        </p>
+                        <p>
+                            I just recently got another small prototyping
+                            computer called the
+                            <a href="https://docs.onion.io/omega2-docs/omega2p.html">
+                                Onion Omega2+
+                            </a>. This computer comes in a convenient package
+                            that allows you to use many different docks that
+                            allow you to connect to different peripherals. I got
+                            the breadboard dock with mine. The breadboard dock
+                            makes prototyping with the Onion Omega much easier.
+                            There is no soldering required and components can be
+                            swapped around quickly. The Onion Omega has 15 GPIOs
+                            that can be used to attach a great number of
+                            different input and output devices. Some of the pins
+                            even have built in serial communication abilities,
+                            which allow for an even greater number of components
+                            to be connected through multiplexing. The Onion
+                            Omega also supports I<sup>2</sup>C and SPI devices
+                            like those that commonly drive simple displays. The
+                            first project I have planned for my Omega involves
+                            using I<sup>2</sup>C to connect either 7 segment
+                            displays or some type of OLED display in order to
+                            create an alarm clock.
+                        </p>
+                        <hr>
+                        <img src="OnionOmega2p.jpg" alt="Onion Omega2+"
+                             style="width: 100%">
+                        <hr>
+                        <p>
+                            The Onion Omega2+ runs on a similar chipset to the
+                            <a href="#voco">VoCore</a>, but comes in a package
+                            that is much easier to deal with. The Omega runs a
+                            distribution of Linux that is based on
+                            <a href="https://lede-project.org/">LEDE</a>. This
+                            allows for the computer to be very capable, even
+                            though the device has no way of producing a useful
+                            graphical environment. In order to make the Omega
+                            easy to use, there is a web interface to the device
+                            that can be accessed through any web browser. This
+                            web interface is surprisingly complete and almost
+                            feels like the experience you would expect from a
+                            graphical shell such as Ubuntu's Unity. However, I
+                            prefer the simplicity of using the command line,
+                            which can easily be done using ssh or by using
+                            serial communication. I can tell that this device
+                            will prove to be very useful to me in the future
+                            even if just as a wireless access point; and I am
+                            excited to see what interesting projects I can think
+                            of to make use of the device.
+                        </p>
+                    </div>
+                    <!-- /.blog-post -->
+                    <div class="blog-post">
                         <h2 class="blog-post-title">
                             Monolithic, Micro, and Hybrid Kernels
                         </h2>
@@ -99,7 +157,7 @@ and open the template in the editor.
                     </div>
                     <!-- /.blog-post -->
                     <div class="blog-post">
-                    <h2 class="blog-post-title">VoCore2 Lite</h2>
+                        <h2 class="blog-post-title" id="voco">VoCore2 Lite</h2>
                     <p class="blog-post-meta">
                         May 25, 2017 by
                         <a href="#">Logan</a>
