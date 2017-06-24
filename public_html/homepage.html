@@ -11,6 +11,9 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="blog.css" rel="stylesheet">
+        <link rel="stylesheet" href="js/highlight.js/styles/default.min.css">
+        <script src="js/highlight.js/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <div class="blog-masthead " id="top">
@@ -32,6 +35,137 @@ and open the template in the editor.
             </div>
             <div class="row">
                 <div class="col-sm-8 blog-main">
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">
+                            Onion Omega Binary Alarm Clock
+                        </h2>
+                        <p class="blog-post-meta">
+                            June 24, 2017 by
+                            <a href="#">Logan</a>
+                        </p>
+                        <p>
+                            In this post, I will lay out the steps that I took
+                            to complete my first real project with my new Onion
+                            Omega2+. As I mentioned in my previous post, my goal
+                            for my first project with the device was to create
+                            some sort of alarm clock. I wanted to get started on
+                            this right away and did not want to buy any extra
+                            components to finish the design. Because of this,
+                            all of the parts that I used for this project came
+                            from my <a href="http://tinyurl.com/y7mhnzmz">
+                                Elegoo Upgraded Electronics Fun Kit
+                            </a> which I already had. However, I did have to use
+                            a USB power supply other than the one that came with
+                            this kit because it was not powerful enough to drive
+                            the Omega under heavy load. Only using this kit
+                            limited me to only being able to use individual LEDs
+                            for the time display. Because of this, I decided to
+                            display the time in a binary format. I knew that I
+                            would be able to use the shift register included in
+                            the kit to be able to represent a byte on 8 LEDs
+                            while only using 3 of the Omega's GPIO pins, so I
+                            set out to figure out the programming.
+                        </p>
+                        <hr>
+                        <p>
+                            Once I knew how I was going to lay out the
+                            components on my breadboard, my next step was to
+                            learn what the best way for me to program this
+                            system would be. In my initial tests with the Omega,
+                            I had used shell scripting to cycle one LED. I knew
+                            that it would be possible for me to do my
+                            programming in this manner, but I knew it would be
+                            very difficult to control the shift register in this
+                            manner. I wanted to be able to do this with an
+                            object oriented language so that I could have
+                            a class for shift registers that I would likely use
+                            again in future projects. Looking through the Onion
+                            Omega documentation, I found that python would
+                            likely be the best language for this purpose. The
+                            Onion team already has a python library available
+                            that allows for easy control for the Omega's GPIO.
+                            I also found a tutorial in the documentation for one
+                            of the kits available with the Onion Omega that
+                            provided a class for controlling a shift register as
+                            well as an example of how to use this class. As
+                            someone whom had never written any python, I thought
+                            it would be a good idea for me to go through this
+                            code and type it out myself so that I could become
+                            more familiar with python syntax. By going through
+                            this code, I found that it would be even easier than
+                            I had previously thought to format the decimal
+                            notation times retrieved from the time functions to
+                            strings in a binary format that could be split apart
+                            and sent as individual bits to the shift register.
+                            As someone that started out using C and C++, I
+                            gained a respect for the power of using python for
+                            embed devices. The function to format an integer to
+                            an 8 bit binary representation looks like this:
+                        <pre><code >
+binaryMinutes = format(currentMinutes, '08b')
+                            </code></pre>
+                            Functions for retrieving the time of day from the
+                            system can be included by using the time module.
+                            This library also includes the definition for a time
+                            struct and functions for manipulating these structs.
+                            I was already familiar with most of these because
+                            they are very similar to the functions and struct in
+                            C. There is also a more modern "datetime" module
+                            that works in a more object oriented manner, but I
+                            chose not to use this because I was already familiar
+                            with the regular time module.
+                        </p>
+                        <br>
+                        <p>
+                            The hardest part of this project for me was grasping
+                            the concept of data structures in python. The data
+                            structure that I used to keep track of the alarm
+                            times is a list. The python list data type covers
+                            several of the data types from the C++ standard
+                            library that I am used to being separate. The list
+                            can be used as a list, stack, or a queue in python.
+                            The list can also be sorted automatically, which I
+                            make use of in my program.
+                        <pre><code>
+# Set the alarm time from file alarmTime.txt
+inFile = open('alarmTime.txt')
+alarmList = []
+for line in inFile:
+	# Creates a list containing time structs
+	# Strings in file should be of format 'HH:MM'
+	alarmString = line.rstrip()
+	alarmList.append(alarmString)
+# The list should be sorted so that it is easier to evaluate
+alarmList.sort(key=None, reverse=True)
+</code></pre>
+                            As you can see, I also had to do a bit of string
+                            manipulation to get the strings in the format I
+                            wanted from out of the file. When the lines are read
+                            from the file, the newline character at the end is
+                            kept in the string. Conveniently, there is a built
+                            in python function for managing this. the "rstrip"
+                            function strips all of the whitespace characters
+                            from the end of the string. Once the strings are in
+                            this format, it is easy to compare them with the
+                            output of a "strftime" function, which is how the
+                            program checks if it is time for the alarm to go off
+                            or not.
+                        </p>
+                        <br>
+                        <p>
+                            My plans moving forward with my Onion Omega2+ are to
+                            upgrade the clock to make it more readable. I am
+                            thinking that I could use my current components in a
+                            round layout to show the time as an analog clock, or
+                            maybe just buy some sort of numerical digit display.
+                            Meanwhile, I am going to try to apply some of my
+                            new knowledge of python to work on some simple
+                            projects with the
+                            <a href="https://www.tensorflow.org">TensorFlow</a>
+                            machine learning libraries.
+                        </p>
+                    </div>
+                    <!-- /.blog-post -->
                     <div class="blog-post">
                         <h2 class="blog-post-title">The Onion Omega2+</h2>
                         <p class="blog-post-meta">
