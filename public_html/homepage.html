@@ -37,6 +37,67 @@ and open the template in the editor.
                 <div class="col-sm-8 blog-main">
                     <div class="blog-post">
                         <h2 class="blog-post-title">
+                            Using the Onion Omega with the Arduino Dock 2
+                        </h2>
+                        <p class="blog-post-meta">
+                            July 25, 2017 by
+                            <a href="#">Logan</a>
+                        </p>
+                        <p>
+                            The Onion Omega is a very capable computer, but
+                            some things are not very easy to implement because
+                            of the limited amount of software libraries that
+                            have been created for the device. Fortunately, there
+                            is an easy solution for this. The Onion Omega is
+                            available with several dock devices that break out
+                            the device's pins for easy use with external
+                            components. Some docks even add extra features, such
+                            as the Arduino Dock. The Arduino Dock adds the full
+                            functionality of an Arduino Uno to your Onion Omega.
+                            The Omega communicates with the Arduino ATmega chip
+                            through it's various serial lines. The Omega even
+                            handles flashing programs to the chip remotely
+                            through an ssh connection handled transparently by
+                            the Arduino IDE.
+                        </p>
+                        <hr>
+                        <img src="HelloWorld.jpg" alt="Arduino Dock & Display"
+                             style="width: 100%">
+                        <hr>
+                        <p>
+                            The main reason that I purchased the Arduino Dock
+                            was to be able to use community provided libraries
+                            for driving a MAX2719 based LED matrix display. It
+                            would be very time consuming for me to attempt to
+                            duplicate this library for use with the Omega's
+                            GPIO. I got an example running on the Arduino in a
+                            matter of minutes. I plan to use the Arduino just
+                            for driving the display, with text coming from the
+                            Omega's UART serial output. This will allow me to
+                            create applications that pull information from the
+                            internet, such as stock prices and weather data, and
+                            the display them on a scrolling style display like
+                            you would see in Times Square.
+                        </p>
+                        <hr>
+                        <p>
+                            Another advantage of the Arduino Dock is the
+                            addition of analog inputs to your project. This is
+                            useful for connecting to components such as
+                            potentiometers and temperature sensors. This is not
+                            as much as an advantage to me, because I already
+                            have a higher precision DAC that can communicate
+                            with the Omega directly through I<sup>2</sup>C. The
+                            other big advantage of working with the Arduino Dock
+                            is that you can safely use 5V inputs. This can be
+                            useful in cases where cheap 5V logic devices
+                            experience problems operating on 3.3V. However, I
+                            have not had any problems with this so far.
+                        </p>
+                    </div>
+                    <!-- /.blog-post -->
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">
                             Onion Omega Binary Alarm Clock
                         </h2>
                         <p class="blog-post-meta">
